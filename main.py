@@ -132,7 +132,7 @@ def main():
     train_labels = pd.concat([train_labels, df_labels_train], axis=1)
     test_data = pd.concat([test_data, df_labels_test], axis=1)
 
-    train_idxs, val_idxs = train_test_split(list(train_labels.index), test_size=0.33)
+    train_idxs, val_idxs = train_test_split(list(train_labels.index), test_size=0.33, random_state = 100)
     test_idxs = list(samp_subm.index)
 
     num_labels = len(labels)
